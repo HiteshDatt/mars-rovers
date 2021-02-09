@@ -19,7 +19,7 @@ function GalleryOptions(props){
                 <span>Rover</span>
 
                 <select name="rovers" value = {props.rover} onChange = {(event) => props.changerover(event.target.value)} >
-                    <option value="curiosity" selected>Curiosity</option>
+                    <option value="curiosity">Curiosity</option>
                     <option value="opportunity">Opportunity</option>
                     <option value="spirit">Spirit</option>
                 </select>

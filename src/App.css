@@ -132,6 +132,8 @@ a{
     background-color: #e0e0e0;
     text-align: center;
     justify-self: center;
+    cursor: pointer;
+    position: relative;
 }
 .gallery-grid .grid-item span{
     font-size: 17px;
@@ -144,6 +146,40 @@ a{
 
 .gallery .no-img{
     text-align: center;
+}
+
+.gallery .info-bg{
+    position: absolute;
+    top: 25px;
+    background: #272727;
+    z-index: 1;
+    color: white;
+    border-radius: 5px;
+    cursor: text;
+    transform: scale(1.5);
+    transition: transform .5s ease, opacity .1s ease;
+}
+.gallery .info{
+    position: relative;
+    font-size: 12px;
+}
+.gallery .info button{
+    position: absolute;
+    top: -17px;
+    right: 4px;
+    width: 18px;
+    height: 18px;
+    background: #EC0E0E;
+    border: 0px;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+}
+.gallery .info table td{
+    vertical-align: top;
+    text-align: left;
+    min-width: 80px;
+    padding: 5px 2px;
 }
 
 @media only screen and (max-width: 1024px){

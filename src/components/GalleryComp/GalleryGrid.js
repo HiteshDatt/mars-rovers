@@ -43,9 +43,15 @@ function GalleryGrid(props) {
                 <div className="gallery-grid">
                   {
                   items.photos.map(i => (
-                    <GalleryImage key = {i.id} 
+                    <GalleryImage key = {i.id}
+                    photo_id = {i.id} 
                     img_src = {i.img_src} 
-                    camera = {i.camera.name} />
+                    camera = {i.camera.name} 
+                    camera_fullname = {i.camera.full_name}
+                    rover = {i.rover.name}
+                    launch_date = {i.rover.launch_date}
+                    landing_date = {i.rover.landing_date}
+                    status = {i.rover.status}/>
                   ))}
                 </div>
                 )

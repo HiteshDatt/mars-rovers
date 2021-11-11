@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react"
 import GalleryImage from "./GalleryImage"
+import "@lottiefiles/lottie-player"; //loading animation
 
 const key= process.env.REACT_APP_API_KEY;
 
@@ -14,7 +15,9 @@ function GalleryGrid(props) {
         .then(
           (result) => {
             setItems(result);
-            setIsLoaded(true);
+            setTimeout(() => {
+              setIsLoaded(true);
+            }, 1000);
           },
           (error) => {
             setError(error);
@@ -27,7 +30,18 @@ function GalleryGrid(props) {
         return <div>Error: {error.message}</div>;
     } 
     else if (!isLoaded) {
-        return <div>Loading...</div>;
+        return(
+          <div style={{width:'28%',margin:'auto',marginTop:'-60px',minWidth:'280px'}}>
+            <lottie-player
+              autoplay
+              loop
+              mode="normal"
+              src="https://assets2.lottiefiles.com/packages/lf20_zGHcl0.json"
+            >
+            </lottie-player>
+
+          </div>
+        );
     } 
     else {
         return (

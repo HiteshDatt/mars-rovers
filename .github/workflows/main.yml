@@ -27,6 +27,11 @@ jobs:
         version: 14
 
     # Runs a set of commands using the runners shell
+    - name: Create env file
+      run: |
+        touch .env
+        echo REACT_APP_API_KEY=${{ secrets.REACT_APP_API_KEY }} >> .env
+        
     - name: Build the site
       run: |
         npm ci

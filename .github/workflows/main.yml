@@ -6,7 +6,7 @@ name: Netlify Builds
 # events but only for the master branch
 on:
   push:
-    branches: [ netlify-action-workflow ]
+    branches: [ main ]
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -41,7 +41,7 @@ jobs:
       uses: nwtgck/actions-netlify@v1.2
       with:
           publish-dir: './build'
-          production-branch: netlify-action-workflow
+          production-branch: main
           deploy-message: '${{ github.event.head_commit.message }}'
       env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

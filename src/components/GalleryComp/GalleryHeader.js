@@ -12,7 +12,7 @@ function GalleryHeader(){
 
     return(
         <div className = "gallery-head">
-            <h2 style= {{transform: `translateY(${Translate}px)`}}>Mars Rover Images !!</h2>
+            <h2 style= {{transform: `translateY(${Translate}px)`}}>Mars Rover Images...</h2>
         </div>
     );
 }
